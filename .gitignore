@@ -26,9 +26,8 @@ node_modules
 # The bug bot's secrets on the server.
 tools/discord-bot/.env
 
-# Personal agent instructions. A committed CLAUDE.md would stop Claude Code
-# reading AGENTS.md; a personal one starts with @AGENTS.md.
-/CLAUDE.md
+# Personal agent instructions stay out of commits. This fork tracks a root
+# CLAUDE.md of one line, @AGENTS.md, so Claude Code still reads AGENTS.md.
 /CLAUDE.local.md
 /.claude/CLAUDE.md
 
