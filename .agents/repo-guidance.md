@@ -77,11 +77,14 @@ this file now; `.agents/decisions.md` records the change.
   2026-11-15, `gh run list -R fitzforge/polestar --workflow <file>` showed
   completed `ci.yml` runs for that day's pull requests and for pushes to
   `next` and `main` on 2026-11-12, and `pr-base.yml` runs that day. In the
-  owner's fork no workflow is registered and none has ever run: on
-  2026-11-15 `gh api repos/roethlar/polestar/actions/workflows` reported a
-  count of 0 and `gh run list -R roethlar/polestar` an empty list. So local
-  runs are the only verification for work on this fork; upstream's CI sees
-  only a pull request opened there.
+  owner's fork none has ever run, as far as was seen. Until the governance
+  commits were pushed on 2026-11-15 the fork had no workflow registered;
+  that push registered upstream's workflows there
+  (`gh api repos/roethlar/polestar/actions/workflows` then listed them as
+  active), yet `gh run list -R roethlar/polestar` was still empty a minute
+  after it. Check that command live before relying on this. Until a run
+  shows up there, local runs are the only verification for work on this
+  fork; upstream's CI sees only a pull request opened there.
 
 ## Remotes & Sync
 
