@@ -9,11 +9,12 @@ checked live in git and never stored here. Put machine facts in
 
 ## Now
 
-- Governance bootstrap, directly on `next` (no work branch). On 2026-11-15
-  upstream's agent file was carved out into `.agents/repo-guidance.md`. The
-  bootstrap is finished when the root `AGENTS.md` is the toolkit's (its
-  first line is "# Agent Guidance") and the owner has decided whether the
-  governance commits are published to the fork. Check both live.
+- Governance bootstrap: complete. On 2026-11-15, directly on `next`,
+  upstream's agent file was carved out into `.agents/repo-guidance.md`
+  (commit a6189c686) and the toolkit's `AGENTS.md` and `CLAUDE.md` were
+  installed (commit 1baf886ce). A read-only refresh plan against 1baf886ce
+  found nothing left to reconcile. The owner then set the push policy to
+  always. Archive this entry at the next catchup.
 - No customization is recorded yet. As of 9fec78e2f the tree was clean,
   `next` was the only local branch, and there were no stashes or extra
   worktrees.
@@ -22,11 +23,6 @@ checked live in git and never stored here. Put machine facts in
 
 - Owner: name the first customization. The fork exists for them
   (`.agents/repo-guidance.md`, Mission Detail).
-- Owner: decide whether to publish the governance commits to the fork
-  (`.agents/push-policy.md` says ask first). Upstream's
-  `.github/workflows/ci.yml` is written to run on any push to `next`. No
-  workflow is registered in the fork today (`.agents/repo-guidance.md`,
-  Verification), so whether a push would start it there is not known.
 - Before the first merge from upstream or the first upstream bug fix: a
   remote for upstream, added on the owner's go (`.agents/repo-guidance.md`,
   Remotes & Sync).
